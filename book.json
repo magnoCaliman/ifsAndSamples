@@ -1,0 +1,7 @@
+{
+    "plugins": [
+        "youtubex",
+        "expandable-chapters"
+    ],
+    "pluginsConfig": {}
+}
