@@ -2,147 +2,97 @@
 
 ---
 
-- variável é conceito básico e essencial em praticamente qualquer linguagem de programação
-- é possível criar coisas bastante interessantes sem utilizar variáveis (ver exemplos do tópico sobre argumentos). porém seria difícil continuar um estudo mais profundo em programação sem falar de variáveis.
+- variável é conceito básico e essencial em praticamente qualquer linguagem de programação. talvez vc já tenha ouvido falar.
+- é possível criar coisas bastante interessantes sem utilizar variáveis (ver exemplos do tópico sobre argumentos). porém seria difícil continuar um estudo mais profundo em programação sem falar sobre variáveis.
 
-- mas, antes de definir precisamente o conceito ou discutir aspectos técnicos, pensemos primeiramente *pq variáveis existem*. afinal, se variáveis são algo tão ubíquo em praticamente todas linguagens de programação, elas devem servir algum propósito bastante importante.
-- em outras palavras, o que é que nós *não conseguimos fazer* sem utilizar variáveis? 
+- mas, antes de definir precisamente o conceito ou discutir aspectos técnicos, pensemos primeiramente _pq variáveis existem_. afinal, se variáveis são algo tão ubíquo em praticamente todas linguagens de programação, elas devem servir algum propósito bastante importante.
+- em outras palavras, o que é que nós _não conseguimos fazer_ sem utilizar variáveis? 
+
+- ouça esse exemplo, onde 3 osciladores são tocados em sequência (ouça com fones)
+
+```
+{Pulse.ar(freq:200, mul:0.1)!2}.play; //oscilador 1
+{Pulse.ar(freq:202, mul:0.1)!2}.play; //oscilador 2
+{LFTri.ar(freq:100, mul:0.1)!2}.play; //oscilador 3
+```
+- explicação idéia 3 osciladores, com relação específica de frequência entre eles. 
+
+- vc pode querer trocar para outras frequências, mas mantendo essas relação entre os valores
+
+```
+{Pulse.ar(freq:300, mul:0.1)!2}.play; //oscilador 1
+{Pulse.ar(freq:302, mul:0.1)!2}.play; //oscilador 2
+{LFTri.ar(freq:150, mul:0.1)!2}.play; //oscilador 3
+```
+- relação entre os valores dos argumentos de frequência continua.
+
+- agora digamos que vc não queira modificar manualmente os valores de frequência. vc quer que o computador selecione números aleatórios, aplique esses números como parâmetros de frequência, mas mantendo essa relação.
+"ah, isso eu sei fazer. eu vi que existe uma [palavra reservada](link) no SuperCollider chamada `rrand()` que faz isso"
+seu primeiro instinto então seria substituir os valores do primeiro argumento `freq:` de cada oscilador por um `rrand()`. Algo como isso...
+
+```
+{Pulse.ar(freq:rrand(200, 300), mul:0.1)!2}.play;
+{Pulse.ar(freq:rrand(200, 300)+2, mul:0.1)!2}.play;
+{LFTri.ar(freq:rrand(100, 150), mul:0.1)!2}.play;
+```
+- não muito parecido com o exemplo anterior. eu gosto, mas não é exatamente o que estamos procurando.
+- pq? o que está acontecendo?
+- a diferença advém do fato de que estamos usando 3 funções diferentes de geração de números randômicos. cada um gera um número diferente. (mastigar bem essa explicação)
+- perdemos a relação 1:(1)+2:1/2
+
+- talvez exemplo processing? linhas paralelas...
+
+```
+size(300, 200);
+background(255);
+line(150, 0, 150, 200);
+```
+
+- se vc nunca estudou processing, não se preocupe em entender cada linha do código acima. o que importa é...
+- mesmo problema do synth. mesmo princípio.
+
+- vc, [um ser humano com encéfalo altamente desenvolvido](ilha das flores) está provavelmente já entendeu o problema e está gritando com o computador, "não seja burro. eu preciso que vc escolha apenas **um** número randômico _e use esse mesmo número_ para a calcular a frequência dos três".
+- mas pra isso, o computador precisa de alguma maneira de **guardar** esse número, para usar depois. 
+- e é exatamente aí que entram as variáveis
+- variáveis são ferramenta que nos permite, entre outras coisas que veremos a seguir, resolver o problema acima.
+
+<!-- - <span style="color:blue">some *blue* text</span>. -->
+<!-- - <font color = "blue">adf</font> -->
 
 ---
 
-- desafio: programe a seguinte animação
-[exemplo código de barra]
+### definição
+- é a ferramenta computacional que nos permite ensinar o computador a guardar dados que são importantes para o nosso programa. ao guardar, pode acessar novamente / operar sobre esse valor / utilizar em mais de um lugar.
+- antes do uso de variáveis, 
 
-- como definir abstratamente essa animação? como descrever os passos pelos quais percorre o código que gera essa animação? qual o seu *algoritmo*?
+- "espaço de alocação de memória". 
 
-- partindo da descrição mais abstrata e afunilando para a mais específica:
-<br>
-- esse programa:
-	- desenha linhas
+- analogia da caixa
 
-- esse programa:
-	- desenha linhas que individualmente tem seus pontos de início e fim sempre no topo e fundo da janela.
-	- desenha linhas com uma relação específica de posição entre elas.
-  
-- esse programa:
-	- desenha linhas que, randomicamente, começam no topo e terminam no fundo da tela
-	- desenha linhas sempre paralelas entre si
-	- desenha linhas sempre perpendiculares à tela
+### casos de uso //aqui, exemplos dos videos
+- legibilidade do código
+  - código para o computador rodar / para humano ler 
+- reutilizar uma informação
+  - responde problema synths SC / linhas paralelas processing
+- facilitar manutenção / evitar redundâncias
+- operação sobre variáveis
+  - freq: numRand + 2
+  - freq: freq + (freq * 0.1) - exemplo marcelo synthAdd
+	- esse procedimento de usar o valor de uma variável para modificar a própria variável é tão comum em programação que merece um tópico próprio: [iteração]()
 
-- desenhar linhas que começam no topo e terminam no fundo da tela não é desafio:
+- comentário sobre linguagens de data flow?
 
-```processing
-//exemplo 1
-
-size(300, 300);
-line(30, 0, 200, 300);
-```
-
-- randomizar os pontos de início e fim, também não
-
-```processing
-// exemplo 2
-
-void setup()
-
-{
-	size(400, 200);
-	frameRate(5);
-}
-
-void draw()
-{
-	line(random(400), 0, random(400), 400);
-}
-
-```
-
-- se desenhar linhas randômicas *e ao mesmo tempo paralelas* é o problema, divide o problema grande em problemas menores
-
-- desenhar uma linha paralela estática:
-
-```processing
-// exemplo 3
-
-void setup()
-{
-	size(300, 300);
-}
-
-void draw()
-{
-	line(30, 0, 30, height);
-}
-```
-
-- desenhar várias linhas paralelas estáticas:
-
-
-```processing 
-//  exemplo 4
-
-void setup()
-{
-	size(300, 300);
-}
-
-void draw()
-{
-	line(30, 0, 30, height);
-	line(40, 0, 40, height);
-	line(200, 0, 200, height);
-}
-```
-
-- onde está o conflito entre ex.2 e ex.4?
-- em outras palavras: pq o random não funciona como esperado / de onde vem a diferença de resultado?
-
-___
-
-- já que uma linha é [uma conexão entre dois pontos](https://processing.org/reference/line_.html), para desenhar uma linha perperdicular à tela, precisamos que os valores das coordenadas X do primeiro e do segundo ponto (ou seja, do início e do fim da linha) sejam iguais. em outras palavras: o primeiro e terceiro argumentos tem que possuir o mesmo valor, como mostra o ex.4
-
-- porém, ao tentar substituir os valores *hardcoded*<sup>[1]</sup> nesses argumentos por um gerador de números randômicos, como no exemplo 2, esbarramos no problema de que dois números *diferentes* são gerados*, um para cada argumento, fazendo com que nossa linha não seja desenhada de forma perpendicular à janela.
-
-```processing
-line(random(400), 0, random(400), 400) // duas funções random() diferentes
-	                                   // geram valores diferentes
-```
-
-- o que precisamos é que apenas uma função `random()` seja utilizada, e que o valor por ela gerado possa ser aplicado aos dois parâmetros.
-
-- concluimos então que precisamos de algo que nos permita que uma mesma informação (no nosso exemplo, o número gerado por uma única função `random()`), seja acessada e utilizada por duas partes diferentes do código - os primeiro e teceiros argumentos da função `line()`.
-- ou seja, o computador precisa ser capaz de *lembrar* de uma certa informação, *para utilizar mais de uma vez*
-
-
-- variáveis são a maneira que o computador ganha memória (nada a ver com isso (downloadmoreram.com))
-- definição técnica de "espaço de alocação de memória"
-
-___
-
-introVar_2.pde
-  - conceito
-  - height / width
-	
-- variaVar_3.pde
-  - tipo
-  - operacao ("variáveis variam...")
-	- mouseX / mouseY: aula04/shieldsUp.pde
-
-- circulosRandom_4.pde
-  - declaração (tipo + nome) + atribuição (inicialização)
-  
-- iteracaoVar_5.pde
-  - iteração = animação!
-  
-- exemploShiffman_6.pde
-  - futucar...
-  
-- paintSemPmouse_7.pde
-  - desafio, entender a lógica...
-
-## rascunho
+### tecnicalidades
+- as 3 partes: tipo / nome / valor
+- tipologia
+- escopo
+- nomenclatura
+- better practices (talvez como item extra "observações extras"? ver code completes)
 
 ## notas
 <sub>[1] - explicação de hardcoded
-## referências #
+
+## referências
+
+sonic pi tutorial - 5.6
 
