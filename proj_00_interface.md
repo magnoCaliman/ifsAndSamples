@@ -1,6 +1,8 @@
-Navegando na interface - Max && SuperCollider
+# Navegando na interface - Max && SuperCollider
 
-{%youtube%}51TJsgDWS8k{%endyoutube%}
+{%youtube%}QN4fGUM_ppc{%endyoutube%}
+
+Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/QN4fGUM_ppc)
 
 ---
 Na área de teoria do áudio, esse projeto lida com os seguintes tópicos:
