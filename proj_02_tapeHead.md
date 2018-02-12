@@ -2,7 +2,7 @@
 
 {%youtube%}BfoE1mYKj04{%endyoutube%}
 
-Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/BfoE1mYKj04)
+Caso player acima não funcione, acessar o video [nesse link].(https://youtu.be/BfoE1mYKj04)
 
 ---
 
@@ -11,6 +11,7 @@ No campo do som, alguns tópicos de leitura relevantes para esse projeto:
 * [Comprimento de onda](https://en.wikipedia.org/wiki/Wavelength)
 * [Turntablism](https://en.wikipedia.org/wiki/Turntablism) && [Pierre Schaeffer](https://en.wikipedia.org/wiki/Pierre_Schaeffer)
 * [Síntese granular](https://en.wikipedia.org/wiki/Granular_synthesis)
+
 <p>
 
 No campo da computação, alguns tópicos de leitura relevantes para esse projeto:
