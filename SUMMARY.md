@@ -10,4 +10,6 @@
   * [03 - Sampler](proj_03_sampler.md)
  
 * PROGRAMAÇÃO
-     * [Sintaxe e palavras reservadas](prog_palavrasReservadas_argumentos.md)
+  * [Sintaxe e palavras reservadas](txt_palavrasReservadas.md)
+  * [Modularidade](txt_modularidade.md)
+  * [Variáveis](txt_variáveis.md)
