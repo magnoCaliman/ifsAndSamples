@@ -12,4 +12,4 @@
 * [PROGRAMAÇÃO]()
   * [Sintaxe e palavras reservadas](txt_palavrasReservadas.md)
   * [Modularidade](txt_modularidade.md)
-  * [Variáveis](txt_variáveis.md)
+  * [Variáveis](txt_variaveis.md)
