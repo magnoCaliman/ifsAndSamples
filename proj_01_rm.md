@@ -16,7 +16,7 @@ Na área de teoria do áudio, alguns tópicos de leitura relevantes para esse pr
 
 Na área de teoria da computação, tópicos de leitura relevantes para esse projeto:
 
-* [Variáveis](https://en.wikipedia.org/wiki/Variable_(computer_science)
+* [Variáveis](https://en.wikipedia.org/wiki/Variable_(computer_science))
 * [Dispositivos de entrada](https://en.wikipedia.org/wiki/Input_device)
 * [Métodos e orientação a objetos]() (!!)
 
