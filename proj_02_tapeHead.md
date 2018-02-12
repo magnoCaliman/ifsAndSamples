@@ -2,7 +2,7 @@
 
 {%youtube%}BfoE1mYKj04{%endyoutube%}
 
-Caso player acima não funcione, acessar o video [nesse link].(https://youtu.be/BfoE1mYKj04)
+Caso player acima não funcione, acessar o video [nesse link.](https://youtu.be/BfoE1mYKj04)
 
 ---
 
