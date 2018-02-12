@@ -18,11 +18,10 @@ Na área de teoria da computação, tópicos de leitura relevantes para esse pro
 
 * [Variáveis](https://en.wikipedia.org/wiki/Variable_(computer_science))
 * [Dispositivos de entrada](https://en.wikipedia.org/wiki/Input_device)
-* [Métodos e orientação a objetos]() (!!)
 
 ---
 
-Os códigos desse projeto podem ser baixados [aqui.]()
+Os códigos desse projeto podem ser baixados [aqui.]() <font color="red">adicionar</font>
 
 ### Desafios sugeridos
 
