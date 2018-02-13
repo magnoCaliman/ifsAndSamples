@@ -8,7 +8,7 @@ Caso player acima não funcione, acessar o video [nesse link.](https://youtu.be/
 
 ![](./img/proj_cabecaLeitura.jpg "Fitas K7 são legais de novo...")
 
-Descrição do projeto
+>Criação de um programa que controla a reprodução de um arquivo de áudio a partir das posições vertical e horizontal do mouse. Uma simulação virtual da manipulação concreta da cabeça de leitura de um tocador de fita e/ou agulha leitora de um reprodutor de discos de vinil.
 
 ---
 
@@ -35,6 +35,6 @@ Os códigos desse projeto podem ser baixados [aqui.](https://drive.google.com/op
 É altamente recomendado que você explore e faça alterações, por conta própria, nos códigos apresentados nesse projeto.<br>
 Aqui estão algumas sugestões de novas funcionalidades e/ou modificações que podem ser implementadas:
 
-- Experimente com samples de diferentes durações: desde vários minutos até frações de segundo.
-- Use um [random walk](https://en.wikipedia.org/wiki/Random_walk) para controlar a posição de leitura do buffer.
+- Use samples de diferentes durações: desde vários minutos até frações de segundo.
+- Experimente, além da posição do mouse, diferentes formas de controle sobre o parâmetro de posição de leitura do buffer, como um [random walk](https://en.wikipedia.org/wiki/Random_walk).
 - Implemente um [loop](https://en.wikipedia.org/wiki/Control_flow#Loops) com diferentes leituras simultâneas do buffer, onde cada leitura possui uma taxa levemente diferente, simulando um princípio de [chorus](https://en.wikipedia.org/wiki/Chorus_effect)

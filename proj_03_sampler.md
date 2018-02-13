@@ -8,7 +8,7 @@ Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/Q
 
 ![](./img/proj_sampler.jpg "Rotinas nunca se atrasam para o ensaio...")
 
-Descrição do projeto
+>Implementação de dois autômatos criadores de melodias e ritmos generativos, partindo da manipulação da taxa de velocidade de leitura de samples gravados, assim como de processos randômicos de seleção de amostras.
 
 ---
 
@@ -37,5 +37,6 @@ Os códigos e os samples desse projeto podem ser baixados [aqui.](https://drive.
 Aqui estão algumas sugestões de novas funcionalidades e/ou modificações que podem ser implementadas:
 
 - Utilize o método [.wchoose()](http://doc.sccode.org/Classes/SequenceableCollection.html#-wchoose) de modo que algumas notas e/ou samples tenham mais probabilidade de serem escolhidos que outros.
+- Adicione um objeto [slider] aos argumentos dos objetos [metro], e explore dessicronias temporais entre dois "bateristas" diferentes.
 - Construa um fork com dois ou mais métodos [.do{}](http://doc.sccode.org/Reference/Control-Structures.html#.do) aninhados, para criar um beat que possui duas partes distintas que se alternam.
 - Implemente um uso do método [.midiratio](http://doc.sccode.org/Classes/AbstractFunction.html#-midiratio) que permita a reprodução de qualquer nota dentro dos doze semi-tons de uma oitava.

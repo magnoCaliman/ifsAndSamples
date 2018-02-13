@@ -8,7 +8,7 @@ Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/f
 
 ![](./img/proj_modAnel.jpg "The One Ring (mod) To Rule Them All")
 
-Descrição do projeto
+>Implementação de um algoritmo de _síntese aditiva_, onde um oscilador é utilizado para modular a amplitude de um segundo oscilador. 
 
 ---
 
@@ -37,4 +37,3 @@ Aqui estão algumas sugestões de novas funcionalidades e/ou modificações que 
 - Implemente um controle de [DC offset](https://en.wikipedia.org/wiki/DC_bias), transformando a [modulação em anel](https://en.wikipedia.org/wiki/Ring_modulation) em [modulação de amplitude](https://en.wikipedia.org/wiki/Amplitude_modulation).
 - Substitua um dos osciladores da modulação por um sample de som gravado, como vozes e samples de bateria e percussão.
 - Adicione algum tipo de [envelope dinâmico](https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR\)_envelope), que ative a modulação somente, por exemplo, quando um botão do mouse for pressionado.
-- Controle a frequência moduladora através de um [step sequencer](https://en.wikipedia.org/wiki/Music_sequencer#Step_sequencers), emulando [esse pedal de guitarra](https://www.youtube.com/watch?v=lBZO63OpNgc).

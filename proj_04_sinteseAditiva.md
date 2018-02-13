@@ -1,16 +1,17 @@
 # Síntese Aditiva
 
-![](./img/proj_addSynth.jpg "Se você disser que eu desafino, amor...")
+![](./img/proj_addSynth_edit.jpg "Se você disser que eu desafino, amor...")
 
-Descrição do projeto
+>Implementação do método de síntese de aditiva, onde osciladores senoidais são somados de acordo com os valores de frequência de uma série harmônica, para posteriormente terem suas frequências alteradas, tornando o conteúdo espectral progressivamente mais inarmônico. 
+>Esse projeto não possui video, apenas o código para download.
 
 ---
 
 No campo do som, alguns tópicos de leitura relevantes para esse projeto:
 
-* [Frequência](https://en.wikipedia.org/wiki/Pitch_(music\)#Pitch_and_frequency)
-* [Sampleamento](https://en.wikipedia.org/wiki/Sampling_(music\))
-* [Zero crossing](https://en.wikipedia.org/wiki/Zero_crossing)
+* [Síntese aditiva](https://en.wikipedia.org/wiki/Additive_synthesis)
+* [Interferência construtiva e destrutiva](http://www.phys.uconn.edu/~gibson/Notes/Section5_2/Sec5_2.htm)
+* [Série harmônica](https://en.wikipedia.org/wiki/Harmonic)
 
 <p>
 
@@ -30,10 +31,7 @@ Os códigos e os samples desse projeto podem ser baixados [aqui.](https://drive.
 É altamente recomendado que você explore e faça alterações, por conta própria, nos códigos apresentados nesse projeto.<br>
 Aqui estão algumas sugestões de novas funcionalidades e/ou modificações que podem ser implementadas:
 
-- Utilize o método [.wchoose()](http://doc.sccode.org/Classes/SequenceableCollection.html#-wchoose) de modo que algumas notas e/ou samples tenham mais probabilidade de serem escolhidos que outros.
-- Construa um fork com dois ou mais métodos [.do{}](http://doc.sccode.org/Reference/Control-Structures.html#.do) aninhados, para criar um beat que possui duas partes distintas que se alternam.
-- Implemente um uso do método [.midiratio](http://doc.sccode.org/Classes/AbstractFunction.html#-midiratio) que permita a reprodução de qualquer nota dentro dos doze semi-tons de uma oitava.
-
-#### resolver
-- subir código exemplo
-- link quebrado: pitch, sampleamento
+- Adicione controles de amplitude individuais para as parciais harmônicas e investigue as consequências disso para a forma de onda gerada, assim como no resultado sonoro.
+- Crie um [envelope dinâmico](https://en.wikipedia.org/wiki/Synthesizer#Attack_Decay_Sustain_Release_(ADSR) onde os harmônicos possuem tempos distintos de decaimento. 
+- Reproduza o resultado sonoro do primeiro minuto ouvido [aqui](https://www.youtube.com/watch?v=SZazYFchLRI).
+- Implemente [LFOs](https://en.wikipedia.org/wiki/Low-frequency_oscillation) em algumas parciais harmônicas, de modo que seu valor de frequência não seja estático. 
