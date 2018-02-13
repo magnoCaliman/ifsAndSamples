@@ -22,9 +22,10 @@ No campo do som, alguns tópicos de leitura relevantes para esse projeto:
 
 No campo da computação, alguns tópicos de leitura relevantes para esse projeto:
 
-* [Escopo de variáveis](https://en.wikipedia.org/wiki/Scope_(computer_science\))
+* <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">Escopo de variáveis</a>
 * [Buffers de dados](https://en.wikipedia.org/wiki/Data_buffer)
-* [Argumentos](https://en.wikipedia.org/wiki/Parameter_(computer_programming\))
+* <a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">Argumentos</a>
+<!-- * [Argumentos](https://en.wikipedia.org/wiki/Parameter_(computer_programming\)) -->
 
 ---
 
