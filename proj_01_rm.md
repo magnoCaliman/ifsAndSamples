@@ -8,7 +8,7 @@ Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/f
 
 ![](./img/proj_modAnel.jpg "The One Ring (mod) To Rule Them All")
 
->Implementação de um algoritmo de _síntese aditiva_, onde um oscilador é utilizado para modular a amplitude de um segundo oscilador. 
+>Implementação de um algoritmo de síntese aditiva, onde um oscilador é utilizado para modular a amplitude de um segundo oscilador. 
 
 ---
 
@@ -21,7 +21,8 @@ No campo do som, alguns tópicos de leitura relevantes para esse projeto:
 
 No campo da computação, alguns tópicos de leitura relevantes para esse projeto:
 
-* [Variáveis](https://en.wikipedia.org/wiki/Variable_(computer_science\))
+* <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)">Variáveis</a>
+<!-- * [Variáveis](https://en.wikipedia.org/wiki/Variable_(computer_science\)) -->
 * [Dispositivos de entrada](https://en.wikipedia.org/wiki/Input_device)
 
 ---

@@ -6,7 +6,7 @@ Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/Q
 
 ---
 
-Apresentação das interfaces, modos de operação e formas de interação dos ambientes de programação [Max](https://cycling74.com/products/max) && [SuperCollider](http://supercollider.github.io/). 
+>Apresentação das interfaces, modos de operação e formas de interação dos ambientes de programação [Max](https://cycling74.com/products/max) && [SuperCollider](http://supercollider.github.io/). 
 
 ---
 
