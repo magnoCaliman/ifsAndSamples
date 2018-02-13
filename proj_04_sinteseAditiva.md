@@ -1,12 +1,6 @@
-# Sampler
+# Síntese Aditiva
 
-{%youtube%}Q3rwUPyCqmg{%endyoutube%}
-
-Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/Q3rwUPyCqmg)
-
----
-
-![](./img/proj_sampler.jpg "Fitas K7 são legais de novo...")
+![](./img/proj_addSynth.jpg "Fitas K7 são legais de novo...")
 
 Descrição do projeto
 
@@ -29,7 +23,7 @@ No campo da computação, alguns tópicos de leitura relevantes para esse projet
 
 ---
 
-Os códigos e os samples desse projeto podem ser baixados [aqui.](https://drive.google.com/open?id=1is--re9WDybGcbUXP4zgRRMup32WFd38)
+Os códigos e os samples desse projeto podem ser baixados [aqui.](https://drive.google.com/open?id=11VlvfHAiY2TV8H2c9-Y6CTgKt76QsMwF)
 
 ### Desafios sugeridos
 
@@ -39,3 +33,7 @@ Aqui estão algumas sugestões de novas funcionalidades e/ou modificações que 
 - Utilize o método [.wchoose()](http://doc.sccode.org/Classes/SequenceableCollection.html#-wchoose) de modo que algumas notas e/ou samples tenham mais probabilidade de serem escolhidos que outros.
 - Construa um fork com dois ou mais métodos [.do{}](http://doc.sccode.org/Reference/Control-Structures.html#.do) aninhados, para criar um beat que possui duas partes distintas que se alternam.
 - Implemente um uso do método [.midiratio](http://doc.sccode.org/Classes/AbstractFunction.html#-midiratio) que permita a reprodução de qualquer nota dentro dos doze semi-tons de uma oitava.
+
+#### resolver
+- subir código exemplo
+- link quebrado: pitch, sampleamento
