@@ -6,7 +6,7 @@ Caso player acima não funcione, acessar o video [nesse link](https://youtu.be/Q
 
 ---
 
-![](./img/proj_sampler.jpg "Fitas K7 são legais de novo...")
+![](./img/proj_sampler.jpg "Rotinas nunca se atrasam para o ensaio...")
 
 Descrição do projeto
 

@@ -1,7 +1,7 @@
 {
     "plugins": [
-        "youtubex",
-        "expandable-chapters"
+        "youtubex"
+        // "expandable-chapters"
     ],
     "pluginsConfig": {}
 }

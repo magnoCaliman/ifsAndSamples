@@ -1,6 +1,6 @@
 # Síntese Aditiva
 
-![](./img/proj_addSynth.jpg "Fitas K7 são legais de novo...")
+![](./img/proj_addSynth.jpg "Se você disser que eu desafino, amor...")
 
 Descrição do projeto
 
