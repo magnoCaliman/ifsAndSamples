@@ -10,9 +10,9 @@ Em outras palavas, o que é que nós _não conseguimos fazer_ sem usarmos variá
 
 ---
 
-Ouça esse exemplo, feito em SuperCollider###, onde três osciladores são acionados um após o outro. Recomendo usar fones de ouvido, pois algumas das frequências são muito graves para as caixinhas de som de qualquer laptop##.
+Ouça esse exemplo, feito em SuperCollider###, onde três osciladores são acionados um após o outro. Recomendo usar fones de ouvido, pois algumas das frequências são muito graves para as caixinhas de som de qualquer laptop###.
 
-```arduino
+```ruby
 {Saw.ar(freq:200, mul:0.1)!2}.play;   //oscilador 1
 {Saw.ar(freq:202, mul:0.1)!2}.play;   //oscilador 2
 {LFTri.ar(freq:100, mul:0.1)!2}.play; //oscilador 3
