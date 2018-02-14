@@ -58,6 +58,10 @@ Isso acontece porque o Processing não entende as palavras _"desenhe"_, ou _"lin
 
 > ###### LINGUAGENS DE PROGRAMAÇÃO SÓ ENTENDEM AS PALAVRAS QUE FAZEM PARTE DO VOCABULÁRIO DAQUELA LINGUAGEM! 
 
+<p align="center">
+<img src="./img/instrucao.jpeg" title="Não é assim que isso funciona. Não é assim que nada disso funciona..." width=60% height=60%>
+</p>
+
 O Processing inclusive marca as palavras que não entende com um sublinhado vermelho, de maneira similar ao corretor ortográfico de um editor de texto.
 Portanto, se queremos realizar uma ação em uma linguagem de programação, _precisamos utilizar as palavras exclusivas daquela linguagem, capazes de serem corretamente interpretadas._
 
