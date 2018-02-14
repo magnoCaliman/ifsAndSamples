@@ -1,6 +1,6 @@
 # ÍNDICE
 
-* [COMO USAR ESSE LIVRO...](README.md)
+* [INTRODUÇÃO](README.md)
 
 * [PROJETOS]()
   <!-- * [Projeto modelo diagramacao](proj_modelo.md) -->
