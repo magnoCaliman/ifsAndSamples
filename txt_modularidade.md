@@ -2,13 +2,13 @@
 
 ---
 
-Se analisarmos nosso [projeto de modulação em anel](), podemos considerar que ele possui três partes claramente delimitadas: algo que nos dá valores numéricos relativos à posição do mouse; um estágio de geração de sinais de áudio; e uma etapa de multiplicação de valores. 
+Se analisarmos nosso [projeto de modulação em anel](proj_01_rm.md), podemos considerar que ele possui três partes claramente delimitadas: algo que nos dá valores numéricos relativos à posição do mouse; um estágio de geração de sinais de áudio; e uma etapa de multiplicação de valores. 
 
-imagem modAnel
+![](./img/proj_modAnel.jpg)
 
-Da mesma maneira, também podemos reconhecer no [projeto de sampler]() (apesar de um pouco mais complexo estruturalmente) componentes individuais: carrega-se arquivos de áudio em vários buffers; lê-se esses buffers de uma maneira espefícia; sorteia-se valores que serão utilizados para controle de certos parâmetros da reprodução do áudio.
+Da mesma maneira, também podemos reconhecer no [projeto de sampler](proj_03_sampler.md) (apesar de um pouco mais complexo estruturalmente) componentes individuais: carrega-se arquivos de áudio em vários buffers; lê-se esses buffers de uma maneira espefícia; sorteia-se valores que serão utilizados para controle de certos parâmetros da reprodução do áudio.
 
-imagem sampler
+![](./img/proj_sampler.jpg)
 
 Podemos estender essa análise, reconhecendo não apenas que nossos projetos possuem partes individuais menores que juntas formam um todo, mas que essas partes constituintes _trocam informações entre sí_. Os valores de posição do mouse na modulação em anel são "plugados" nos argumentos de frequência dos osciladores. De modo similar, os números sorteados no nosso sampler utilizando ```[].choose``` são enviados para o parâmetro ```rate:``` na função ```PlayBuf.ar()```.
 

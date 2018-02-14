@@ -33,7 +33,7 @@ Se modificarmos todas as frequências mas mantivermos essa razão entre os valor
 <center>###Tocador de áudio</center>
 
 Ainda temos a mesma relação entre o primeiro oscilador e os dois seguintes. Adiciona-se dois Hertz para um, e divide-se a frequência pela metade para o outro: 300:302:150.
-Você provavelmente percebeu que o som é mais agudo quando comparado com o primeiro exemplo (`freq:300` > `freq:200`), mas o timbre é bastante similar. A mesma oscilação, o mesmo [batimento]() resultante da relação entre os dois primeiros osciladores; e a mesma componente grave adicionada pelo terceiro oscilador - grave esse que, para nossos ouvidos ocidentais acostumados com Bach, Beatles e Beyoncé, soa bastante consonante.
+Você provavelmente percebeu que o som é mais agudo quando comparado com o primeiro exemplo (`freq:300` > `freq:200`), mas o timbre é bastante similar. A mesma oscilação, o mesmo <a href="https://en.wikipedia.org/wiki/Beat_(acoustics)">batimento</a> resultante da relação entre os dois primeiros osciladores; e a mesma componente grave adicionada pelo terceiro oscilador - grave esse que, para nossos ouvidos ocidentais acostumados com Bach, Beatles e Beyoncé, soa bastante consonante.
 
 ---
 
