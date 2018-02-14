@@ -10,7 +10,7 @@
   * [03 - Sampler](proj_03_sampler.md)
   * [04 - Síntese aditiva](proj_04_sinteseAditiva.md)
  
-* [PROGRAMAÇÃO]()
+* [TEXTOS]()
   * [Sintaxe e palavras reservadas](txt_palavrasReservadas.md)
   * [Modularidade](txt_modularidade.md)
   * [Variáveis](txt_variaveis.md)

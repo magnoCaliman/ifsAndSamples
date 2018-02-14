@@ -1,9 +1,9 @@
-# Variáveis
+# VARIÁVEIS
 
 ---
 
 Variáveis estão entre as ferramentas mais basilares do estudo em computação. Se você teve contato, mesmo que inicial, com alguma linguagem de programação, é bastante provável que já tenha esbarrado com o termo.
-Apesar de se tratar de um conceito fundamental em computação, coisas interessantes são possíveis de serem criadas sem recorrer ao uso de variáveis.[###exemplinho rápido processing/sc/sonic pi]. Muitos dos exemplos do nosso texto sobre [palavras reservadas]() são construídos dessa maneira. Porém, como veremos a seguir, se trata de uma ferramenta que cumpre algumas funções tão importantes no processo de desenvolvimento de um programa, que seria difícil um estudo mais aprofundado sem abordarmos o tema.
+Apesar de se tratar de um conceito fundamental em computação, coisas interessantes são possíveis de serem criadas sem recorrer ao uso de variáveis.[###exemplo rápido processing/sc/sonic pi]. Muitos dos exemplos do nosso texto sobre [palavras reservadas](txt_palavrasReservadas.md) são construídos dessa maneira. Porém, como veremos a seguir, se trata de uma ferramenta que cumpre algumas funções tão importantes no processo de desenvolvimento de um programa, que seria difícil um estudo mais aprofundado sem abordarmos o tema.
 
 Mas, antes de definirmos precisamente o conceito, ou discutirmos aspectos técnicos, pensemos primeiramente _por que_ variáveis existem. Afinal, se se trata de algo tão  ubíquo, presente em praticamente todas as linguagens de programação<sup>[1]</sup>, variáveis devem suprir alguma necessidade bastante importante dentro do processo de criação de um programa.
 Em outras palavas, o que é que nós _não conseguimos fazer_ sem usarmos variáveis?
@@ -19,8 +19,8 @@ Ouça esse exemplo, feito em SuperCollider, onde três osciladores são acionado
 ```
 <center>###Tocador de áudio</center>
 
-O que temos aqui são três geradores de som distintos, onde através do [argumento]() `freq`, seus valores de frequência são especificados: `freq:200`, `freq:202` e `freq:100`.
-Perceba que existe uma relação simples entre esses valores. O segundo oscilador tem a frequência do primeiro adicionada em dois [Hertz]() (`freq:200` e `freq:202`), e o terceiro oscilador possui a metade da frequência do primeiro (`freq:200 e freq:100`)<sup>[2]<sup>. 
+O que temos aqui são três geradores de som distintos, onde através do argumento `freq`, seus valores de frequência são especificados: `freq:200`, `freq:202` e `freq:100`.
+Perceba que existe uma relação simples entre esses valores. O segundo oscilador tem a frequência do primeiro adicionada em dois [Hertz](https://en.wikipedia.org/wiki/Hertz) (`freq:200` e `freq:202`), e o terceiro oscilador possui a metade da frequência do primeiro (`freq:200 e freq:100`)<sup>[2]<sup>. 
 
 Se modificarmos todas as frequências mas mantivermos essa razão entre os valores, obtemos um som que é mais agudo ou mais grave (dependendo se escolhermos valores maiores ou menores), mas cuja sonoridade geral permanece bastante similar. Ouça o exemplo anterior novamente, e compare com esse:
 
@@ -37,10 +37,10 @@ Você provavelmente percebeu que o som é mais agudo quando comparado com o prim
 
 ---
 
-Você pode gastar bastante tempo experimentando outros valores de frequência para comparar diferentes sonoridades (e recomendo que você faça isso!)<sup>3</sup>. Entretanto, em algum momento pode ser interessante transferir o pesado fardo da escolha desses números de você programador, para o computador. Uma possível  maneira de se fazer isso é solicitando que o programa escolha números aleatórios, [randômicos](), e utilize esses números como argumentos de frequência para os osciladores.
+Você pode gastar bastante tempo experimentando outros valores de frequência para comparar diferentes sonoridades (e recomendo que você faça isso!)<sup>3</sup>. Entretanto, em algum momento pode ser interessante transferir o pesado fardo da escolha desses números de você programador, para o computador. Uma possível  maneira de se fazer isso é solicitando que o programa escolha números aleatórios, e utilize esses números como argumentos de frequência para os osciladores.
 
 Esse seria um ótimo momento para você dizer algo como: "Ah, isso eu sei fazer! Eu vi que existe uma palavra reservada no SuperCollider chamada `rrand()` que faz exatamente isso. Eu só preciso escrever `rrand(1, 10)` por exemplo, que o programa escolhe pra mim um número aleatório entre 1 e 10".
-Sabendo do princípio de modularidade que permite que [funções possam ser utilizadas como argumentos de outras funções](), seu primeiro instinto poderia ser o de substituir os valores do argumento `freq` de cada oscilador por uma função `rrand()`. Dessa maneira:
+Sabendo do princípio de modularidade que permite que [funções possam ser utilizadas como argumentos de outras funções](txt_modularidade.md), seu primeiro instinto poderia ser o de substituir os valores do argumento `freq` de cada oscilador por uma função `rrand()`. Dessa maneira:
 
 ```ruby
 {Saw.ar(freq:rrand(200, 300), mul:0.1)!2}.play;
@@ -55,7 +55,7 @@ O resultado sonoro no entanto não soa muito parecido com o que ouvimos anterior
 Se em todos os três exemplos até agora, em tese, aplicamos exatamente a mesma lógica na atribuição de valores aos nossos argumentos `freq`, por que essa diferença sonora? O que está acontecendo?
 
 Nos dois primeiros exemplos (aqueles em que escrevemos manualmente os valores dos argumentos `freq`) as frequências dos osciladores 2 e 3 foram escolhidas _a partir_ do oscilador 1, certo? 
-Veja. Ao decidirmos por `freq:300` para o oscilador 1 no segundo exemplo, os próximos passos, as etapas seguintes do [algoritmo]() que fizemos mentalmente, foram "para o oscilador 2, somar 2 ao valor de frequência do oscilador 1": 302 = 300 + 2. Seguido de "para o oscilador 3, dividir por 2 o valor de frequência do oscilador 1": 150 = 300 / 2.
+Veja. Ao decidirmos por `freq:300` para o oscilador 1 no segundo exemplo, os próximos passos, as etapas seguintes do algoritmo que fizemos mentalmente, foram "para o oscilador 2, somar 2 ao valor de frequência do oscilador 1": 302 = 300 + 2. Seguido de "para o oscilador 3, dividir por 2 o valor de frequência do oscilador 1": 150 = 300 / 2.
 
 Aí está exatamente a fonte do nosso problema: nosso programa novo, que gera valores randômicos para as frequências, não está escolhendo um valor para o primeiro oscilador e _em função desse valor_ decidindo as frequências dos dois osciladores seguintes, mas sim escolhendo três valores diferentes, um para cada oscilador. Cada ocorrência da função `rrand(200, 300)` _gera um número diferente_, o que quebra nossa lógica de "soma 2, divide por 2".
 É por esse motivo que não só esse terceiro exemplo soa diferente dos dois anteriores, como ele vai soar diferente cada vez que você testar!
@@ -73,8 +73,10 @@ Se você pensou isso, então você já sabe o que são variáveis. O resto são 
 
 ### NOTAS
 
-[1] - [todas? esoteric languages]()
+[1] - [todas? esoteric languages](https://en.wikipedia.org/wiki/Esoteric_programming_language)
+
 [2] - Comum em síntese. certas relações de valores de frequências - valores muito próximos, dobro, metade. É isso que faz ouvir como um som só.
+
 [3] - comentário sobre parar o servidor
 
 <br>
