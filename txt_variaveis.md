@@ -18,7 +18,7 @@ Ouça esse exemplo, feito em SuperCollider, onde três osciladores são acionado
 {LFTri.ar(freq:100, mul:0.1)!2}.play; //oscilador 3
 ```
 <center>###Tocador de áudio</center>
-<br>
+
 O que temos aqui são três geradores de som distintos, onde através do argumento `freq`, seus valores de frequência são especificados: `freq:200`, `freq:202` e `freq:100`.
 Perceba que existe uma relação simples entre esses valores. O segundo oscilador tem a frequência do primeiro adicionada em dois [Hertz](https://en.wikipedia.org/wiki/Hertz) (`freq:200` e `freq:202`), e o terceiro oscilador possui a metade da frequência do primeiro (`freq:200 e freq:100`)<sup>[2]<sup>. 
 
