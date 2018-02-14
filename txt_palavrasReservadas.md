@@ -37,10 +37,10 @@ desenhe uma linha
 
 A resposta, porém, não é a tão esperada linha, mas sim uma mensagem de erro, onde o Processing educadamente diz que [ele não pode obedecer a minha instrução](https://www.youtube.com/watch?v=7qnd-hdmgfk "Processing, open the  pod bay doors."), e que `The class "desenhe" does not exist`.
 
-<!-- <center> -->
-![](./img/prog_palavrasReservadas_img1.png "Processing não entende português...")
-<!-- </center> -->
-<!-- entre colchetes é texto de acessibilidade. entre aspas é texto de hover -->
+<p align = "center">
+<img src = "./img/prog_palavrasReservadas_img1.png" title="Processing não entende português...">
+</p>
+<!-- ![](./img/prog_palavrasReservadas_img1.png "Processing não entende português...") -->
 
 Talvez seja uma incompatibilidade entre o fato de estar escrevendo em português, e a língua oficial de boa parte das linguagens de programação ser o inglês. Vamos tentar
 
@@ -50,7 +50,10 @@ draw a line
 
 e ver se o resultado é diferente.
 
-![](./img/prog_palavrasReservadas_img2.png "Também não entende inglês...")
+<p align = "center">
+<img src = "./img/prog_palavrasReservadas_img2.png" title="Também não entende inglês...">
+</p>
+<!-- ![](./img/prog_palavrasReservadas_img2.png "Também não entende inglês...") -->
 
 Aparentemente não. Mesmo em inglês a mensagem de erro `The class "draw" does not exist` permanece.
 
@@ -74,7 +77,10 @@ line();
 Repare que a função `line();` não é _apenas a palavra line_ (isso nós tentamos, quando escrevemos em inglês), mas a palavra _line_, seguida de parênteses, e um ponto e vírgula.
 Porém mesmo usando o vocabulário correto, e a _sintaxe_ correta, com a função `line();` temos outra mensagem de erro ao tentar rodar o nosso código.
 
-![](./img/prog_palavrasReservadas_img4.png "line(); sem argumentos")
+<p align = "center">
+<img src = "./img/prog_palavrasReservadas_img4.png" title="line(); sem argumentos">
+</p>
+<!-- ![](./img/prog_palavrasReservadas_img4.png "line(); sem argumentos") -->
 
 
 <br>
