@@ -25,18 +25,26 @@ Se trata portanto de uma escolha por um tipo de [arquitetura](https://en.wikiped
 
 >Essa abordagem, onde projetamos nosso software através de módulos que ["fazem uma coisa, e fazem essa coisa bem"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well), assim como [outras filosofias de desenvolvimento de software](https://en.wikipedia.org/wiki/KISS_principle), têm origem na década de 70, durante o desenvolvimento do anos mais tarde viria a se tornar o sistema operacional Linux.
 
-### notas
+---
+
+#### ANOTAÇÕES
+
+Algumas anotações não organizadas sobre possíveis caminhos e conteúdos que farão parte da versão final do texto.
 
 - analogia com rascunho / arte final
-- ninguém começa desenhando os detalhes
-- parte-se do geral em direção ao específico
+  - ninguém começa desenhando os detalhes
+  - parte-se do geral em direção ao específico
 
 - [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)
-- quer programar um delorean, começa fazendo um carrinho de rolimã, não um capacitor de fluxo...
+  - quer programar um delorean, começa fazendo um carrinho de rolimã, não um capacitor de fluxo...
 
-## funções como argumentos de outras funções
+##### funções como argumentos de outras funções
 
-trump china
+- SinOsc.ar(freq:MouseX.kr()) || fill(random(255), random(255), random(255)).
+- princípio simples que permite resultados complexos. "como controlar a frequência de oscilador usando a distância de um sensor de arduino?
+  - SinOsc.ar(FuncaoMagicaQueConectaComArduino.kr()) -> conceitualmente igual à SinOsc.ar(MouseX.kr())
+- escalonamento de valores - map(), .range(), [scale 0 127 0. 1.]
 
-## reaproveitamento de módulos
-- escolha de lista sampler
+##### reaproveitamento de módulos
+
+- projeto de sampler. reaproveitamento do sorteador de números na lista usando [zl.mth]
