@@ -1,5 +1,7 @@
 # MODULARIDADE
 
+---
+
 Se analisarmos nosso [projeto de modulação em anel](), podemos considerar que ele possui três partes claramente delimitadas: algo que nos dá valores numéricos relativos à posição do mouse; um estágio de geração de sinais de áudio; e uma etapa de multiplicação de valores. 
 
 imagem modAnel
@@ -26,11 +28,11 @@ Se trata portanto de uma escolha por um tipo de [arquitetura](https://en.wikiped
 ### notas
 
 - analogia com rascunho / arte final
-  - ninguém começa desenhando os detalhes
-  - parte-se do geral em direção ao específico
+- ninguém começa desenhando os detalhes
+- parte-se do geral em direção ao específico
 
 - [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)
-  - quer programar um delorean, começa fazendo um carrinho de rolimã, não um capacitor de fluxo...
+- quer programar um delorean, começa fazendo um carrinho de rolimã, não um capacitor de fluxo...
 
 ## funções como argumentos de outras funções
 
