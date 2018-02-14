@@ -23,6 +23,8 @@ De maneira similar, na implementação do nosso sampler, mesmo definido na conce
 
 Se trata portanto de uma escolha por um tipo de [arquitetura](https://en.wikipedia.org/wiki/Modular_programming) na construção dos nossos programas, onde vamos reconhecer a especialização de cada etapa do nosso algoritmo ("nesse momento vou me concentrar em implementar a leitura da posição do mouse, e somente isso..."), assim como a modularidade inerente à essa arquitetura ("já que estou controlando a frequência do oscilador com o mouse, talvez eu possa substituir o mouse por um controlador MIDI...").
 
+<!-- ![](./img/kiss.jpeg "Keep it stupid, simple...") -->
+
 >Essa abordagem, onde projetamos nosso software através de módulos que ["fazem uma coisa, e fazem essa coisa bem"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well), assim como [outras filosofias de desenvolvimento de software](https://en.wikipedia.org/wiki/KISS_principle), têm origem na década de 70, durante o desenvolvimento do anos mais tarde viria a se tornar o sistema operacional Linux.
 
 ---

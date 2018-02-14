@@ -1,10 +1,8 @@
-# Palavras reservadas & Argumentos #
+# SINTAXE E PALAVRAS RESERVADAS
 
 ---
- 
-<!-- ## Intro -->
 
-Todo aprendizado em programação deve partir de uma realização que, em um primeiro momento, pode parecer bastante difícil de acreditar: computadores são, em essência, máquinas muito burras. 
+Uma boa forma de iniciar um aprendizado em programação consiste em partir de uma realização que, em um primeiro momento, pode parecer bastante difícil de acreditar: computadores são, em essência, máquinas muito burras. 
 Apesar de serem capazes de controlar o pouso e decolagem de um avião, ou de conseguirem achar - em uma fração de segundo - [centenas de fotos de gatos de chapéu](https://duckduckgo.com/?q=cats+in+a+hat&ia=images&iax=1 "São gatos. De chapéu..."), computadores ainda são dispositivos extremamente limitados nas suas capacidades.
 
 Um computador é capaz de fazer _uma_ coisa muito bem: análise e manipulação de números. Pequenas operações matemáticas, como somar, subtrair, ou comparar dois valores numéricos diferentes. Isso um computador é capaz de fazer mais rapidamente, e com uma maior taxa de acertos do que qualquer matemático ou enxadrista (humano) jamais sonhou.
@@ -74,6 +72,21 @@ Porém mesmo usando o vocabulário correto, e a _sintaxe_ correta, com a funçã
 
 ![](./img/prog_palavrasReservadas_img4.png "line(); sem argumentos")
 
+
+<br>
+
+### NOTAS
+
+[1] [http://processing.org](processing.org)
+[2] Interpretar vs. compilar. Interpretar "lato sensu"
+[3] Processing também faz som / SuperCollider também faz imagem
+
+---
+
+#### ANOTAÇÕES
+
+Algumas anotações não organizadas sobre possíveis caminhos e conteúdos que farão parte da versão final do texto.
+
 - isso se dá pq `line();`, mesmo sendo o comando correto, ainda cai na categoria de instruções genéricas que o computador não sabe interpretar. (assim como o exemplo de kant, ou as leis do assimov...)
 - só line não é suficiente.
 - computador é muito ruim em dedicir as coisas por conta própria. não basta "desenhe uma linha", mas "desenhe uma linha começando aqui, e indo até ali"
@@ -90,43 +103,12 @@ line(0, 0, 50, 50);
 
 ![](./img/prog_palavrasReservadas_img3.png "título...")
 
+- funções enquanto instruções: "computador, faça isso...". argumentos enquanto qualificadores dessa instrução: "...mas faça _dessa_ maneira"
 
-## notas
 
-<sub>(1) [http://processing.org](processing.org)</sub>
-<sub>[2] Interpretar vs. compilar. Interpretar "lato sensu"</sub>
-<sub>[3] Processing também faz som / SuperCollider também faz imagem</sub>
-
-## rascunho
-
-```processing
-line(0, 0, 10, 10);
-```
-
-```processing
-desenhe uma linha
-```
-
-```ruby
-draw a line
-```
-
-```ruby
-SinOsc.ar(freq:200, mul:0.5)
-```
-
-```ruby
-Line.kr()
-```
 - diferença line do processing / line do SC
   - mesma (quase igual) palavra/função/comando, que duas linguagens diferentes interpretam de maneiras diferentes
+  - como trigger argumento do ```PlayBuf.ar()``` e objeto do Max
   - como _embarazada_ em espanhol e _embaraçada_ em português
 
 
-# referências #
-
-Shifmann, D - Learning Processing
-pp. 3-4
-
-https://www.youtube.com/watch?v=YlRTTzlhquo
-4:20
