@@ -1,6 +1,6 @@
 # IFs && SAMPLES
 
-![](./img/capa.jpg)
+![](./img/capa_alta.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu pulvinar risus. Vivamus vestibulum, arcu at porttitor sagittis, tortor sapien pellentesque lectus, et fringilla orci nisi in sapien. Duis vitae ultrices risus. Nunc suscipit enim sed tristique porta. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque mauris metus, dapibus a congue ac, tincidunt ac libero. Donec nulla ligula, feugiat vel sodales et, lobortis et lorem. Phasellus nec ex tincidunt eros mattis vulputate fringilla sed odio. Fusce tincidunt fermentum euismod. Donec at ultricies arcu. Nam ornare sagittis pellentesque. Praesent dictum purus enim, eu posuere elit lacinia ac. Duis pretium vel sapien sit amet maximus. Cras id iaculis nibh.
 
