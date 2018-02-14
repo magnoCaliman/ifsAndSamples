@@ -35,6 +35,8 @@ Algumas anotações não organizadas sobre possíveis caminhos e conteúdos que 
   - ninguém começa desenhando os detalhes
   - parte-se do geral em direção ao específico
 
+<br>
+
 - [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)
   - quer programar um delorean, começa fazendo um carrinho de rolimã, não um capacitor de fluxo...
 
