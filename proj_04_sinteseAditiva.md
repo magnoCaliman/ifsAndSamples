@@ -4,7 +4,7 @@
 
 >Implementação do método de síntese de aditiva, onde osciladores senoidais são somados de acordo com os valores de frequência de uma série harmônica, para posteriormente terem suas frequências alteradas, tornando o conteúdo espectral progressivamente mais inarmônico. 
 <br>
->Esse projeto não possui video, apenas o código para download..
+>Esse projeto não possui video, apenas o código para download.
 
 ---
 
