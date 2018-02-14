@@ -2,7 +2,7 @@
 
 ---
 
-Uma boa forma de iniciar um aprendizado em programação consiste em partir de uma realização que, em um primeiro momento, pode parecer bastante difícil de acreditar: computadores são, em essência, máquinas muito burras. 
+Uma boa forma de iniciar um estudo em programação consiste em partir de uma realização que, em um primeiro momento, pode parecer bastante difícil de acreditar: computadores são, em essência, máquinas muito burras. 
 Apesar de serem capazes de controlar o pouso e decolagem de um avião, ou de conseguirem achar - em uma fração de segundo - [centenas de fotos de gatos de chapéu](https://duckduckgo.com/?q=cats+in+a+hat&ia=images&iax=1 "São gatos. De chapéu..."), computadores ainda são dispositivos extremamente limitados nas suas capacidades.
 
 Um computador é capaz de fazer _uma_ coisa muito bem: análise e manipulação de números. Pequenas operações matemáticas, como somar, subtrair, ou comparar dois valores numéricos diferentes. Isso um computador é capaz de fazer mais rapidamente, e com uma maior taxa de acertos do que qualquer matemático ou enxadrista (humano) jamais sonhou.
@@ -78,7 +78,9 @@ Porém mesmo usando o vocabulário correto, e a _sintaxe_ correta, com a funçã
 ### NOTAS
 
 [1] [http://processing.org](processing.org)
+
 [2] Interpretar vs. compilar. Interpretar "lato sensu"
+
 [3] Processing também faz som / SuperCollider também faz imagem
 
 ---

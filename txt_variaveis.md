@@ -73,11 +73,11 @@ Se você pensou isso, então você já sabe o que são variáveis. O resto são 
 
 ### NOTAS
 
-[1] - [todas? esoteric languages](https://en.wikipedia.org/wiki/Esoteric_programming_language)
+[1] - Todas? [esoteric languages](https://en.wikipedia.org/wiki/Esoteric_programming_language)
 
 [2] - Comum em síntese. certas relações de valores de frequências - valores muito próximos, dobro, metade. É isso que faz ouvir como um som só.
 
-[3] - comentário sobre parar o servidor
+[3] - Comentário sobre parar o servidor
 
 <br>
 
