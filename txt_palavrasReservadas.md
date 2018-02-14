@@ -83,7 +83,11 @@ Porém mesmo usando o vocabulário correto, e a _sintaxe_ correta, com a funçã
 
 [3] Processing também faz som / SuperCollider também faz imagem
 
+<br>
+
 ---
+
+<br>
 
 #### ANOTAÇÕES
 

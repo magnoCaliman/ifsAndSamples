@@ -21,13 +21,20 @@ O fato dos módulos do seu programa compartilharem informações entre sí pode 
 No nosso algoritmo de modulação em anel, por mais que soubessemos _de saída_ que pretendíamos usar a posição do mouse como dispositivo de controle para as frequências dos osciladores, esse aspecto da implementação foi deixado por último. Utilizamos osciladores com frequências estáticas para construir toda lógica de geração de sinal, modulação e endereçamento das saída de áudios, para só então partirmos para a construção do módulo responsável pela leitura das coordenadas do mouse.
 De maneira similar, na implementação do nosso sampler, mesmo definido na concepção do projeto que um processo de sorteio de taxas de leitura seria utilizado, toda nossa "máquina tocadora de buffers" foi primeiramente construída com parâmetros fixos, nos certificando de que as implementações das funções ```SynthDef``` e ```PlayBuf.ar()``` estavam devidamente funcionais.
 
-Se trata portanto de uma escolha por um tipo de [arquitetura](https://en.wikipedia.org/wiki/Modular_programming) na construção dos nossos programas, onde vamos reconhecer a especialização de cada etapa do nosso algoritmo ("nesse momento vou me concentrar em implementar a leitura da posição do mouse, e somente isso..."), assim como a modularidade inerente à essa arquitetura ("já que estou controlando a frequência do oscilador com o mouse, talvez eu possa substituir o mouse por um controlador MIDI...").
-
+<p align = "center">
+<img src = "./img/kiss.jpeg" title = "Do one thing, and do it well" width=60% height=60%>
+</p>
 <!-- ![](./img/kiss.jpeg "Keep it stupid, simple...") -->
 
->Essa abordagem, onde projetamos nosso software através de módulos que ["fazem uma coisa, e fazem essa coisa bem"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well), assim como [outras filosofias de desenvolvimento de software](https://en.wikipedia.org/wiki/KISS_principle), têm origem na década de 70, durante o desenvolvimento do anos mais tarde viria a se tornar o sistema operacional Linux.
+Se trata portanto de uma escolha por um tipo de [arquitetura](https://en.wikipedia.org/wiki/Modular_programming) na construção dos nossos programas, onde vamos reconhecer a especialização de cada etapa do nosso algoritmo ("nesse momento vou me concentrar em implementar a leitura da posição do mouse, e somente isso..."), assim como a modularidade inerente à essa arquitetura ("já que estou controlando a frequência do oscilador com o mouse, talvez eu possa substituir o mouse por um controlador MIDI...").
+
+>Essa abordagem, onde projetamos nosso software através de módulos que ["fazem uma coisa, e fazem essa coisa bem"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well), assim como [outras filosofias de desenvolvimento de software](https://en.wikipedia.org/wiki/KISS_principle), têm origem na década de 70, durante o desenvolvimento do que anos mais tarde viria a se tornar o sistema operacional Linux.
+
+<br>
 
 ---
+
+<br>
 
 #### ANOTAÇÕES
 
