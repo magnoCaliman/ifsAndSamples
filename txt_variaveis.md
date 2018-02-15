@@ -2,15 +2,15 @@
 
 ---
 
-Variáveis estão entre as ferramentas mais basilares do estudo em computação. Se você teve contato, mesmo que inicial, com alguma linguagem de programação, é bastante provável que já tenha esbarrado com o termo.
-Apesar de se tratar de um conceito fundamental em computação, coisas interessantes são possíveis de serem criadas sem recorrer ao uso de variáveis.[###exemplo rápido processing/sc/sonic pi]. Muitos dos exemplos do nosso texto sobre [palavras reservadas](txt_palavrasReservadas.md) são construídos dessa maneira. Porém, como veremos a seguir, se trata de uma ferramenta que cumpre algumas funções tão importantes no processo de desenvolvimento de um programa, que seria difícil um estudo mais aprofundado sem abordarmos o tema.
+Variáveis estão entre as ferramentas mais basilares do estudo em computação. Se você teve contato, mesmo que superficial, com alguma linguagem de programação, é bastante provável que já tenha esbarrado com o termo.
+Apesar de se tratar de um conceito fundamental, coisas interessantes são possíveis de serem criadas sem recorrer ao uso de variáveis.[###exemplo rápido processing/sc/sonic pi]. Muitos dos exemplos do nosso texto sobre [palavras reservadas](txt_palavrasReservadas.md) são construídos dessa maneira. Porém, como veremos a seguir, se trata de uma ferramenta que cumpre algumas funções tão importantes no processo de desenvolvimento de um programa que seria difícil um estudo mais aprofundado sem abordarmos o tema.
 
-Mas, antes de definirmos precisamente o conceito, ou discutirmos aspectos técnicos, pensemos primeiramente _por que_ variáveis existem. Afinal, se se trata de algo tão  ubíquo, presente em praticamente todas as linguagens de programação<sup>[1]</sup>, variáveis devem suprir alguma necessidade bastante importante dentro do processo de criação de um programa.
-Em outras palavas, o que é que nós _não conseguimos fazer_ sem usarmos variáveis?
+Porém, antes de definirmos precisamente o conceito, ou discutirmos aspectos técnicos, pensemos primeiramente _por que_ variáveis existem. Afinal, se se trata de algo tão  ubíquo, presente em praticamente todas as linguagens de programação<sup>[1]</sup>, variáveis devem suprir alguma necessidade bastante importante dentro do processo de criação de um programa.
+Em outras palavras, o que é que nós _não conseguimos fazer_ sem usarmos variáveis?
 
 ---
 
-Ouça esse exemplo, feito em SuperCollider, onde três osciladores são acionados um após o outro. Recomendo usar fones de ouvido. Alto-falantes de laptop não costumam gostar de frequências muito graves...
+Ouça esse exemplo, feito em SuperCollider, em que três osciladores são acionados um após o outro. Recomendo usar fones de ouvido: alto-falantes de laptop não costumam gostar de frequências muito graves...
 
 ```ruby
 {Saw.ar(freq:200, mul:0.1)!2}.play;   //oscilador 1
@@ -22,7 +22,7 @@ Ouça esse exemplo, feito em SuperCollider, onde três osciladores são acionado
 O que temos aqui são três geradores de som distintos, onde através do argumento `freq`, seus valores de frequência são especificados: `freq:200`, `freq:202` e `freq:100`.
 Perceba que existe uma relação simples entre esses valores. O segundo oscilador tem a frequência do primeiro adicionada em dois [Hertz](https://en.wikipedia.org/wiki/Hertz) (`freq:200` e `freq:202`), e o terceiro oscilador possui a metade da frequência do primeiro (`freq:200 e freq:100`)<sup>[2]<sup>. 
 
-Se modificarmos todas as frequências mas mantivermos essa razão entre os valores, obtemos um som que é mais agudo ou mais grave (dependendo se escolhermos valores maiores ou menores), mas cuja sonoridade geral permanece bastante similar. Ouça o exemplo anterior novamente, e compare com esse:
+Se modificarmos todas as frequências, mas mantivermos essa razão entre os valores, obtemos um som que é mais agudo ou mais grave (dependendo se escolhermos valores maiores ou menores), mas cuja sonoridade geral permanece bastante similar. Ouça o exemplo anterior novamente, e compare com esse:
 
 ```ruby
 {Saw.ar(freq:300, mul:0.1)!2}.play;   //oscilador 1
@@ -55,17 +55,17 @@ O resultado sonoro no entanto não soa muito parecido com o que ouvimos anterior
 Se em todos os três exemplos até agora, em tese, aplicamos exatamente a mesma lógica na atribuição de valores aos nossos argumentos `freq`, por que essa diferença sonora? O que está acontecendo?
 
 Nos dois primeiros exemplos (aqueles em que escrevemos manualmente os valores dos argumentos `freq`) as frequências dos osciladores 2 e 3 foram escolhidas _a partir_ do oscilador 1, certo? 
-Veja. Ao decidirmos por `freq:300` para o oscilador 1 no segundo exemplo, os próximos passos, as etapas seguintes do algoritmo que fizemos mentalmente, foram "para o oscilador 2, somar 2 ao valor de frequência do oscilador 1": 302 = 300 + 2. Seguido de "para o oscilador 3, dividir por 2 o valor de frequência do oscilador 1": 150 = 300 / 2.
+Veja. Ao decidirmos por `freq:300` para o oscilador 1 no segundo exemplo, os próximos passos, as etapas seguintes do algoritmo que fizemos mentalmente foram "para o oscilador 2, somar 2 ao valor de frequência do oscilador 1": 302 = 300 + 2. Seguido de "para o oscilador 3, dividir por 2 o valor de frequência do oscilador 1": 150 = 300 / 2.
 
 Aí está exatamente a fonte do nosso problema: nosso programa novo, que gera valores randômicos para as frequências, não está escolhendo um valor para o primeiro oscilador e _em função desse valor_ decidindo as frequências dos dois osciladores seguintes, mas sim escolhendo três valores diferentes, um para cada oscilador. Cada ocorrência da função `rrand(200, 300)` _gera um número diferente_, o que quebra nossa lógica de "soma 2, divide por 2".
 É por esse motivo que não só esse terceiro exemplo soa diferente dos dois anteriores, como ele vai soar diferente cada vez que você testar!
 
->Para os mais fãs de matemática, poderiamos dizer que nessa versão do programa nós perdemos a razão n:n+2:n/2 entre as frequências dos três osciladores.
+>Para os mais fãs de matemática, poderíamos dizer que nessa versão do programa nós perdemos a razão n:n+2:n/2 entre as frequências dos três osciladores.
 
 Existe a chance dos três `rrand(200, 300)` gerarem exatamente o mesmo número (preservando assim a nossa lógica, e fazendo o terceiro exemplo soar similar aos dois primeiros)? Eu não testei, mas a matemática me diz que se você tentar um milhão de vezes, vai acontecer.
 
 Nesse momento você, [um ser humano com telencéfalo altamente desenvolvido](https://www.youtube.com/watch?v=e7sD6mdXUyg), provavelmente já entendeu o problema em questão, e está gritando para a tela do seu computador algo como "Hora, mas isso é fácil de resolver! Eu só preciso que meu programa gere **apenas um** número randômico, _e use esse mesmo número_ para definir os valores de `freq` nos três osciladores. 
-Em outras palavras, você precisa que seu programa seja capaz de **guardar** uma informação (como um número gerado randomicamente), para que possa ser acessado e utilizado posteriormente. O que você precisa, é que seu programa aprenda a lembrar.
+Em outras palavras, você precisa que seu o programa seja capaz de **guardar** uma informação (como um número gerado randomicamente), para que possa ser acessado e utilizado posteriormente. O que você precisa, é que seu programa aprenda a lembrar.
 
 Se você pensou isso, então você já sabe o que são variáveis. O resto são detalhes técnicos e convenções de sintaxe.
 
